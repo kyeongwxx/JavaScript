@@ -1,0 +1,9 @@
+Math.abs(-1);
+Math.abs('-1');
+Math.abs('');
+Math.abs([]);
+Math.abs(null);
+Math.abs(undefined);
+Math.abs({});
+Math.abs('string');
+Math.abs();
