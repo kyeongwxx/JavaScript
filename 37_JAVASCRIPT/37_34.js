@@ -1,12 +1,12 @@
-const set = new Set();
+const map = new Map();
 
 console.log(NaN === NaN);
 console.log(0 === -0);
 
 // NaN과 NaN을 같다고 평가하여 중복 추가를 허용하지 않는다.
-set.add(NaN).add(NaN);
-console.log(set);
+map.set('NaN', 'value1').set('NaN', 'value2');
+console.log(map);
 
 // +0과 -0을 같다고 평가하여 중복 추가를 허용하지 않는다.
-set.add(0).add(-0);
-console.log(set);
+map.set(0, 'value1').set(-0, 'value2');
+console.log(map);
