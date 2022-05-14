@@ -69,3 +69,50 @@ HTML 문서의 구성 요소인 HTML 요소를 객체화한 모든 노드 객체
 DOM은 HTML 문서의 계층적 구조와 정보를 표현하는 것은 물론 노드 객체의 종류, 즉 노드 타입에 따라 필요한 기능을
 프로퍼티와 메소드의 집합인 DOM API로 제공한다. 이 DOM API를 통해 HTML의 구조나 내용 또는 스타일 등을 동적으로 조작할
 수 있다. -->
+
+<!-- 39.2 요소 노드 취득 -->
+
+<!-- HTML의 구조나 내용 또는 스타일 등을 동적으로 조작하려면 먼저 요소 노드를 취득해야 한다. 텍스트 노드는 요소 노드의
+자식이고, 어트리뷰트 노드는 요소 노드와 연결되어 있기 때문에 텍스트 노드나 어트리뷰트 노드를 조작하고자 할 때도
+마찬가지다. 이를 위해 DOM은 요소 노드를 취득할 수 있는 다양한 메소드를 제공한다. -->
+
+<!-- 39.2.1 id를 이용한 요소 노드 취득 -->
+
+<!-- Document.prototype.getElementById 메소드는 인수로 전달한 id 어트리뷰트 값을 갖는 하나의 요소 노드를 탐색하여
+반환한다.
+
+id 값은 HTML 문서 내에서 유일한 값이어야 하며, class 어트리뷰트와는 달리 공백 문자로 구분하여 여러 개의 값을
+가질 수 없다. -->
+
+<!-- 39.2.2 태그 이름을 이용한 요소 노드 취득 -->
+
+<!-- Document.prototype/Element.prototype.getElementsByTagName 메소드는 인수로 전달한 태그 이름을 갖는 모든 요소
+노드들을 탐색하여 반환한다.
+
+HTML 문서의 모든 요소 노드를 취득하려면 getElementsByTagName 메소드의 인수로 '*'를 전달한다. -->
+
+<!-- 39.2.3 class를 이용한 요소 노드 취득 -->
+
+<!-- Document.prototype/Element.prototype.getElementbyClassName 메소드는 인수로 전달한 class 어트리뷰트 값을 갖는
+모든 요소 노드들을 탐색하여 반환한다. -->
+
+<!-- 39.2.4 CSS 선택자를 이용한 요소 노드 취득 -->
+
+<!-- Document.prototype/Element.prototype.querySelector 메소드는 인수로 전달한 CSS 선택자를 만족시키는 하나의
+요소 노드를 탐색하여 반환한다.
+
+Document.prototype/Element.prototype.querySelectorAll 메소드는 인수로 전달한 CSS 선택자를 만족시키는 모든
+요소 노드를 탐색하여 반환한다. -->
+
+<!-- 39.2.5 특정 요소 노드를 취득할 수 있는지 확인 -->
+
+<!-- Element.prototype.matches 메소드는 인수로 전달한 CSS 선택자를 통해 특정 요소 노드를 취득할 수 있는지 확인한다. -->
+
+<!-- 39.2.6 HTMLCollection과 NodeList -->
+
+<!-- getElementsByTagName, getElementbyClassName 메소드가 반환하는 HTMLCollection 객체는 노드 객체의 상태 변화를
+실시간으로 반영하는 살아 있는 DOM 컬렉션 객체다. 따라서 HTMLCollection 객체를 살아 있는 객체라고 부르기도 한다.
+
+HTMLCollection 객체의 부작용을 해결하기 위해 getElementsByTagName, getElementbyClassName 메소드 대신
+querySelectorAll 메소드를 사용하는 방법도 있다. querySelectorAll 메소드는 DOM 컬렉션 객체인 NodeList 객체를 반환한다.
+이 때 NodeList 객체는 실시간으로 노드 객체의 상태 변경을 반영하지 않는 객체다. -->
