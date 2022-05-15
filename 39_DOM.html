@@ -116,3 +116,43 @@ Document.prototype/Element.prototype.querySelectorAll 메소드는 인수로 전
 HTMLCollection 객체의 부작용을 해결하기 위해 getElementsByTagName, getElementbyClassName 메소드 대신
 querySelectorAll 메소드를 사용하는 방법도 있다. querySelectorAll 메소드는 DOM 컬렉션 객체인 NodeList 객체를 반환한다.
 이 때 NodeList 객체는 실시간으로 노드 객체의 상태 변경을 반영하지 않는 객체다. -->
+
+<!-- 39.3 노드 탐색 -->
+
+<!-- 요소 노드를 취득한 다음, 취득한 요소 노드를 기점으로 DOM 트리의 노드를 옮겨 다니며 부모, 형제, 자식 노드 등을
+탐색한다. DOM 트리 상의 노드를 탐색할 수 있도록 Node, Element 인터페이스는 트리 탐색 프로퍼티를 제공한다. -->
+
+<!-- 39.3.1 공백 텍스트 노드 -->
+
+<!-- HTML 요소 사이의 스페이스, 탭, 줄바꿈 등의 공백 문자는 텍스트 노드를 생성한다. 이를 공백 텍스트 노드라 한다. -->
+
+<!-- 39.3.2 자식 노드 탐색 -->
+
+<!-- - Node.prototype.childNodes  : 자식 노드를 모두 탐색하여 NodeList에 담아 반환한다.
+- Element.prototype.children : 자식 노드 중에서 요소 노드만 모두 탐색하여 HTMLCollection에 담아 반환한다.
+- Node.prototype.firstchild  : 첫 번째 자식 노드를 반환한다.
+- Node.prototype.lastchild   : 마지막 자식 노드를 반환한다.
+- Element.prototype.firstElementChild : 첫 번째 자식 요소 노드를 반환한다.
+- Element.prototype.lastElementChild  : 마지막 자식 요소 노드를 반환한다. -->
+
+<!-- 39.3.3 자식 노드 존재 확인 -->
+
+<!-- 자식 노드가 존재하는지 확인하려면 Node.prototype.hasChildNodes 메소드를 사용한다. -->
+
+<!-- 39.3.4 요소 노드의 텍스트 노드 탐색 -->
+
+<!-- 요소 노드의 텍스트 노드는 요소 노드의 자식 노드이다. 따라서 요소 노드의 텍스트 노드는 firstChild 프로퍼티로
+접근할 수 있다. firstChild 프로퍼티는 첫 번째 자식 노드를 반환한다. -->
+
+<!-- 39.3.5 부모 노드 탐색 -->
+
+<!-- 부모 노드를 탐색하려면 Node.prototype.parentNode 프로퍼티를 사용한다. -->
+
+<!-- 39.3.6 형제 노드 탐색 -->
+
+<!-- 부모 노드가 같은 형제 노드를 탐색하려면 다음과 같은 노드 탐색 프로퍼티를 사용한다.
+
+- Node.prototype.previousSibling : 자신의 이전 형제 노드를 탐색하여 반환한다.
+- Node.prototype.nextSibling : 자신의 다음 형제 노드를 탐색하여 반환한다.
+- Element.prototype.previousElementSibling : 자신의 이전 형제 요소 노드를 탐색하여 반환한다.
+- Element.prototype.nextElementSibling: 자신의 다음 형제 요소 노드를 탐색하여 반환한다. -->
