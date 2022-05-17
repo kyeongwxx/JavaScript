@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: antiquewhite;
+            }
+            .red { color: red; }
+            .blue { color: blue; }
+        </style>
+    </head>
+    <body>
+        <div class="box red">Hello World</div>
+        <script>
+            const $box = document.querySelector('.box');
+
+            $box.classList.add('foo');
+            $box.classList.add('bar', 'baz');
+
+            $box.classList.remove('foo');
+            $box.classList.remove('bar', 'baz');
+            $box.classList.remove('x');
+
+            $box.classList.item(0);
+            $box.classList.item(1);
+
+            $box.classList.contains('box');
+            $box.classList.contains('blue');
+        </script>
+    </body>
+</html>
