@@ -100,3 +100,43 @@ addEventListener 메소드의 첫 번째 매개변수에는 이벤트의 종류�
 <!-- 40.4 이벤트 핸들러 제거 -->
 
 <!-- addEventListener 메소드를 제거하려면 EventTarget.prototype.removeEventListener 메소드를 사용한다. -->
+
+<!-- 40.5 이벤트 핸들러 객체 -->
+
+<!-- 이벤트가 발생하면 이벤트에 관련한 다양한 정보를 담고 있는 이벤트 객체가 동적으로 생성된다. 생성된 이벤트 객체는
+이벤트 핸들러의 첫 번째 인수로 전달된다. -->
+
+<!-- 40.5.1 이벤트 객체의 상속 구조 -->
+
+<!-- 이벤트가 발생하면 이벤트 타입에 따라 다양한 타입의 이벤트 객체가 생성된다.
+
+Event, UIEvent, MouseEvent 등 모두는 생성자 함수다. 따라서 생성자 함수를 호출하여 이벤트 객체를 생성할 수 있다. -->
+
+<!-- 40.5.2 이벤트 객체의 공통 프로퍼티 -->
+
+<!-- Event 인터페이스, 즉 Event.prototype에 정의되어 있는 이벤트 관련 프로퍼티는 UIEvent, CustomEvent, MouseEvent 등
+모든 파생 이벤트 객체에 상속된다. 즉, Event 인터페이스의 이벤트 관련 프로퍼티는 모든 이벤트 객체가 상속받는 공통
+프로퍼티이다. 이벤트 객체의 공통 프로퍼티는 다음과 같다.
+
+- type : 이벤트 타입. String
+- target : 이벤트를 발생시킨 DOM 요소. DOM 요소 노드
+- currentTarget : 이벤트 핸들러가 바인딩된 DOM 요소. DOM 요소 노드
+- eventPhase : 이벤트 전파 단계. number
+- bubbles : 이벤트를 버블링으로 전파하는지 여부. boolean
+- cancleable : preventDefault 메소드를 호출하여 이벤트의 기본 동작을 취소할 수 있는지 여부. boolean
+- defaultPrevented : preventDefault 메소드를 호출하여 이벤트를 취소했는지 여부. boolean
+- isTrusted : 사용자의 행위에 의해 발생한 이벤트인지 여부. boolean
+- timeStamp : 이벤트가 발생한 시각. number -->
+
+<!-- 40.5.3 마우스 정보 취득 -->
+
+<!-- click, dbclick, mousedown, mouseup, mousemove, mouseenter, mouseleave 이벤트가 발생하면 생성되는 MouseEvent
+타입의 이벤트 객체는 다음과 같은 고유의 프로퍼티를 갖는다.
+
+- 마우스 포인터의 좌표 정보를 나타내는 프로퍼티: screenX/screenY, clientX/clientY, pageX/pageY, offsetX/offsetY
+- 버튼 정보를 나타내는 프로퍼티: altKey, ctrlKey, shiftKey, button -->
+
+<!-- 40.5.4 키보드 정보 취득 -->
+
+<!-- keydown, keyup, keypress 이벤트가 발생하면 생성되는 KeyboardEvent 타입의 이벤트 객체는 altKey, ctrlKey,
+shiftKey, metaKey, key, keyCode 같은 고유의 프로퍼티를 갖는다. -->
