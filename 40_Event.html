@@ -9,3 +9,59 @@
 이처럼 이벤트와 그에 대응하는 함수(이벤트 핸들러)를 통해 사용자와 애플리케이션은 상호작용을 할 수 있다. 이와 같이
 프로그램의 흐름을 이벤트 중심으로 제어하는 프로그래밍 방식을 이벤트 드리븐 프로그래밍(event-driven programming)이라
 한다. -->
+
+<!-- 40.2 이벤트 타입 -->
+
+<!-- 이벤트 타입은 이벤트의 종류를 나타내는 문자열이다. -->
+
+<!-- 40.2.1 마우스 이벤트 -->
+
+<!-- - click      : 마우스 버튼 클릭 시
+- dbclick    : 마우스 버튼 더블 클릭 시
+- mousedown  : 마우스 버튼을 눌렀을 때
+- mouseup    : 누르고 있던 마우스 버튼을 놓았을 때
+- mousemove  : 마우스 커서를 움직였을 때
+- mouseenter : 마우스 커서를 HTML 요소 안으로 이동했을 때(버블링 X)
+- mouseover  : 마우스 커서를 HTML 요소 안으로 이동했을 때(버블링 O)
+- mouseleave : 마우스 커서를 HTML 요소 밖으로 이동했을 때(버블링 X)
+- mouseout   : 마우스 커서를 HTML 요소 밖으로 이동했을 때(버블링 O) -->
+
+<!-- 40.2.2 키보드 이벤트 -->
+
+<!-- - keydown  : 모든 키를 눌렀을 때 발생
+- keyup    : 누르고 있던 키를 놓았을 때 한 번만 발생 -->
+
+<!-- 40.2.3 포커스 이벤트 -->
+
+<!-- - focus    : HTML 요소가 포커스를 받았을 때(버블링 X)
+- blur     : HTML 요소가 포커스를 잃었을 때(버블링 X)
+- focusin  : HTML 요소가 포커스를 받았을 때(버블링 O)
+- focusout : HTML 요소가 포커스를 잃었을 때(버블링 O) -->
+
+<!-- 40.2.4 폼 이벤트 -->
+
+<!-- - submit : form 요소 내의 input(text, checkbox, radio), select 입력 필드에서 엔터 키를 눌렀을 때
+           / form 요소 내의 submit 버튼(<button>, <input type="submit">)을 클릭했을 때
+- reset  : form 요소 내의 reset 버튼을 클릭했을 때 -->
+
+<!-- 40.2.5 값 변경 이벤트 -->
+
+<!-- - input  : input(text, checkbox, radio), select, textarea 요소의 값이 입력되었을 때
+- change : input(text, checkbox, radio), select, textarea 요소의 값이 변경되었을 때
+- readystatechange : HTML 문서의 로드와 파싱 상태를 나타내는 document.readyState 프로퍼티 값이 변경될 때 -->
+
+<!-- 40.2.6 DOM 뮤테이션 이벤트 -->
+
+<!-- - DOMContentLoaded : HTML 문서의 로드와 파싱이 완료되어 DOM 생성이 완료되었을 때 -->
+
+<!-- 40.2.7 뷰 이벤트 -->
+
+<!-- - resize : 브라우저 윈도우의 크기를 리사이즈할 때 연속적으로 발생
+- scroll : 웹페이지 또는 HTML 요소를 스크롤할 때 연속적으로 발생 -->
+
+<!-- 40.2.8 리소스 이벤트 -->
+
+<!-- - load   : DOMContentLoaded 이벤트가 발생한 이후, 모든 리소스(이미지, 폰트 등)의 로딩이 완료되었을 때
+- unload : 리소스가 언로드될 때
+- abort  : 리소스 로딩이 중단되었을 때
+- error  : 리소스 로딩이 실패했을 때 -->
